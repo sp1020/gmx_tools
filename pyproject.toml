@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_package"
+version = "0.0.1"
+authors = [
+    {name = "Seungpyo Hong", email = "seungpyo.hong@jbnu.ac.kr"},
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+]
+
+[project.scripts]
+my-script = "my_package.main:main"
