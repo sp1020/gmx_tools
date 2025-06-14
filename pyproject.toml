@@ -8,7 +8,7 @@ version = "0.0.1"
 description = "A collection of scripts to facilitate GROMACS simulations"
 readme = "README.md"
 authors = [{ name = "Seungpyo Hong", email = "seungpyo.hong@jbnu.ac.kr" }]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -18,3 +18,4 @@ dependencies = []
 
 [project.scripts]
 gmx_tools = "gmx_tools.main:main"
+unnatural_aminoacid_ff_builder_cgenff = "gmx_tools.unnatural_aminoacid_ff_builder_cgenff:main"
