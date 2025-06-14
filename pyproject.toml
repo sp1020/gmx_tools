@@ -1,21 +1,20 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "my_package"
+name = "gmx_tools"
 version = "0.0.1"
-authors = [
-    {name = "Seungpyo Hong", email = "seungpyo.hong@jbnu.ac.kr"},
-]
+description = "A collection of scripts to facilitate GROMACS simulations"
 readme = "README.md"
+authors = [{ name = "Seungpyo Hong", email = "seungpyo.hong@jbnu.ac.kr" }]
 requires-python = ">=3.11"
-license = {text = "MIT"}
+license = { text = "MIT" }
 classifiers = [
     "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
 ]
-dependencies = [
-]
+dependencies = []
 
 [project.scripts]
-my-script = "my_package.main:main"
+gmx_tools = "gmx_tools.main:main"

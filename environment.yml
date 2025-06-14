@@ -1,4 +1,4 @@
-name: my_package
+name: gmx_tools
 channels:
   - defaults
   - conda-forge
@@ -11,4 +11,4 @@ dependencies:
   - build
   - pip
   - pip:
-    - -e ${PACKAGE_PATH}
+    - -e .
