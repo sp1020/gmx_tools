@@ -1,0 +1,34 @@
+; Meta data
+title           = Ionization parameters
+
+; Run parameters
+integrator      = steep         ; Steepest‐descent minimization
+emtol           = 1000.0        ; Convergence criterion (kJ/mol·nm)
+emstep          = 0.01          ; Maximum step size (nm)
+nsteps          = 500           ; Maximum number of minimization steps
+
+; Output control
+nstenergy       = 10            ; write energies every 10 steps
+energygrps      = System        ; monitor only the full system
+
+; Neighbor searching
+nstlist         = 1             ; Frequency to update the neighbor list
+rlist           = 1.2           ; Short cutoff for neighbor list (nm)
+cutoff-scheme   = Verlet
+ns_type         = grid
+
+; Electrostatics
+coulombtype     = PME
+rcoulomb        = 1.2
+pme_order       = 4
+fourierspacing  = 0.12
+
+; van der Waals
+vdwtype         = cut-off
+rvdw            = 1.2
+
+; Periodic boundary conditions
+pbc             = xyz
+
+; Dispersion correction
+DispCorr        = EnerPres

@@ -1,0 +1,1 @@
+reindex_pdb --input merged.pdb --output merged_reindex.pdb

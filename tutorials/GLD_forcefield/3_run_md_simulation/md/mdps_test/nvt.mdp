@@ -1,0 +1,61 @@
+; Meta data
+title           = NVT equilibration
+
+; Constraints
+define          = -DPOSRES     ; apply position restraints
+
+; Run parameters
+integrator      = md
+dt              = 0.002        ; 2 fs
+nsteps          = 1000        ; 100 ps
+
+; Output control
+nstxout         = 500          ; 1 ps
+nstvout         = 500          ; 1 ps
+nstenergy       = 500          ; 1 ps
+nstlog          = 500          ; 1 ps
+nstxout-compressed = 500       ; 1 ps
+energygrps      = System
+
+; Bond constraints
+constraints             = all-bonds
+constraint_algorithm    = lincs
+lincs_iter              = 1
+lincs_order             = 4
+
+; Neighbor search
+cutoff-scheme   = Verlet
+ns_type         = grid
+nstlist         = 10
+rlist           = 1.2
+
+; Electrostatics
+coulombtype     = PME
+rcoulomb        = 1.2
+pme_order       = 4
+fourierspacing  = 0.12
+
+; van der Waals
+vdwtype         = cut-off
+rvdw            = 1.2
+
+; Temperature coupling
+tcoupl          = V-rescale
+tc-grps         = Protein Non-Protein
+tau_t           = 0.1 0.1
+ref_t           = 300 300
+
+; No pressure coupling
+pcoupl          = no
+
+; Periodic boundary conditions
+pbc             = xyz
+
+; Dispersion correction
+DispCorr        = EnerPres
+
+; Velocity generation
+continuation	= no   ; first dynamics run (generate velocity)
+gen_vel         = yes
+gen_temp        = 300
+gen_seed        = -1

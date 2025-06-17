@@ -1,0 +1,37 @@
+; Meta data
+title           = Energy minimization
+
+; Run parameters
+integrator      = steep
+emtol           = 1000.0       ; convergence criterion (kJ/mol·nm)
+emstep          = 0.01         ; max step size (nm)
+nsteps          = 50000        ; max number of steps
+
+; Output control 
+nstenergy       = 100
+nstxout         = 100          ; full‐precision frames (optional)
+nstxout-compressed = 100       ; compressed trajectory every 100 steps
+nstlog          = 100          ; flush log every 100 steps
+energygrps      = System
+
+; Neighbor searching
+cutoff-scheme   = Verlet
+ns_type         = grid
+nstlist         = 10
+rlist           = 1.2
+
+; Electrostatics
+coulombtype     = PME
+rcoulomb        = 1.2
+pme_order       = 4
+fourierspacing  = 0.12
+
+; van der Waals
+vdwtype         = cut-off
+rvdw            = 1.2
+
+; Periodic boundary conditions
+pbc             = xyz
+
+; Dispersion correction
+DispCorr        = EnerPres      ; correct VdW energy & pressure for cutoff
