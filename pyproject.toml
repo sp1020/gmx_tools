@@ -18,4 +18,5 @@ dependencies = []
 
 [project.scripts]
 gmx_tools = "gmx_tools.main:main"
-unnatural_aminoacid_ff_builder_cgenff = "gmx_tools.unnatural_aminoacid_ff_builder_cgenff:main"
+modify_cgenff_for_uaa = "gmx_tools.unnatural_aminoacid_ff_builder_cgenff:main"
+reindex_pdb ="gmx_tools.reindex_pdb:main"
