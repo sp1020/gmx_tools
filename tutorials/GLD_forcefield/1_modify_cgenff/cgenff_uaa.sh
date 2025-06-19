@@ -1,1 +1,0 @@
-modify_cgenff_for_uaa --cgenff_dir cgenff_gld --output_dir cgenff_gld_uaa --rtp_file 3_G.rtp --pdb_file 3_GLD_analog_gmx.pdb --mod_file residue_modification.xlsx --resn GLD
